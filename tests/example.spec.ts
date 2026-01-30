@@ -9,13 +9,13 @@ test('Pos_Fun_01 - Standard Singlish to Sinhala conversion is accurate.', async 
 test('Pos_Fun_02 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('api kadee yamu');
-  await page.getByText('අපි කඩේ යමු.').click();
+  await page.getByText('අපි කඩේ යමු').click();
 });
 
 test('Pos_Fun_03 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('mee vaahanee oyaagedha?');
-  await page.getByText('මේ වාහනේ ඔයාගෙද?.').click();
+  await page.getByText('මේ වාහනේ ඔයාගෙද?').click();
 });
 
 test('Pos_Fun_04 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
