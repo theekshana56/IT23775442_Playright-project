@@ -1,4 +1,4 @@
-# Playwright Test Automation Project
+# Playwright Test  Project
 
 This project contains automated test cases developed using Playwright with TypeScript.
 
