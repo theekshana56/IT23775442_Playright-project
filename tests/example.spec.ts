@@ -146,56 +146,56 @@ test('Pos_Fun_24 - Standard Singlish to Sinhala conversion is accurate.', async 
 
 //Negative functional tests
 
-test('Neg_Fun_01 - Joined words handling should fail for matabanisoone', async ({ page }) => {
+test('Neg_Fun_01 - Polite appreciation sentence should fail "oyage sup ekta sthuuthyi"', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('oyage sup ekta sthuuthiyi');
   const output = await page.locator('text=ඔයගෙ සුප් එක්ට ස්තූතියි').textContent();
   expect(output).not.toBe('ඔයගෙ සප් එක්ට ස්තූතියි');
 });
 
-test('Neg_Fun_02 - Joined words handling should fail for matabanisoone', async ({ page }) => {
+test('Neg_Fun_02 - Informal command should fail "anna boss oyata files tikath aran enna kivva"', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('anna boss oyata files tikath aran enna kivvaa');
   const output = await page.locator('text=අන්න boss ඔයට files ටිකත් අරන් එන්න කිව්වා').textContent();
   expect(output).not.toBe('අන්න ප්‍රදානියා ඔයට ලිපිගොණු ටිකත් අරන් එන්න කිව්වා');
 });
 
-test('Neg_Fun_03 - Joined words handling should fail for matabanisoone', async ({ page }) => {
+test('Neg_Fun_03 - Joined words handling should fail "matayannoone"', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('matayannoone');
   const output = await page.locator('text=මටයන්නෝනෙ').textContent();
   expect(output).not.toBe('මට යන්න ඕනෙ');
 });
 
-test('Neg_Fun_04 - Joined words handling should fail for matabanisoone', async ({ page }) => {
+test('Neg_Fun_04 - short expression sentence should fail "mama oyaata godak lv"', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('mama oyaata godak lv');
   const output = await page.locator('text=මම ඔයාට ගොඩක් ල්ව්').textContent();
   expect(output).not.toBe('මම ඔයාට ගොඩක් lv');
 });
 
-test('Neg_Fun_05 - Joined words handling should fail for matabanisoone', async ({ page }) => {
+test('Neg_Fun_05 - Repeated charater sentence should fail "Thanksssss a lottttt"', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('Thanksssss a lottttt');
   const output = await page.locator('text=ථන්ක්ස්ස්ස්ස්ස් a ලොට්ට්ට්ට්').textContent();
   expect(output).not.toBe('ගොඩක් ස්තූතියි');
 });
 
-test('Neg_Fun_06 - Joined words handling should fail for matabanisoone', async ({ page }) => {
+test('Neg_Fun_06 - Number and word comine sentence should fail "Apple gedi 2k dhenna"', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('Apple gedi 2k dhenna');
   const output = await page.locator('text=Apple ගෙඩි 2ක් දෙන්න ').textContent();
   expect(output).not.toBe('ඇපල් ගෙඩි 2ක් දෙන්න');
 });
 
-test('Neg_Fun_07 - Joined words handling should fail for matabanisoone', async ({ page }) => {
+test('Neg_Fun_07 - Mixed casing robustness should fail "OyA HeTA EnaWA Neda"', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('OyA HeTA EnaWA Neda');
   const output = await page.locator('text=ඔය හෙඨ එනWඅ ණෙඩ').textContent();
   expect(output).not.toBe('ඔයා හෙට එනවද');
 });
 
-test('Neg_Fun_08 - Joined words handling should fail for matabanisoone', async ({ page }) => {
+test('Neg_Fun_08 - Incorrect punctuation mark sentence should fail "ehema kohomadha venne !"', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('ehema kohomadha venne !');
   const output = await page.locator('text=එහෙම කොහොමද වෙන්නෙ !').textContent();
@@ -213,8 +213,7 @@ test('Neg_Fun_09 - Empty input should produce no output', async ({ page }) => {
 
 
 
-
-test('Neg_Fun_10 - Joined words handling should fail for matabanisoone', async ({ page }) => {
+test('Neg_Fun_10 - short expression sentence with multiple spaces should fail "mata    godak       sathutuyi"', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('mata    godak       sathutuyi');
   const output = await page.locator('text=මට    ගොඩක්       සතුටුයි').textContent();
