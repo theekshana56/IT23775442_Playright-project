@@ -14,11 +14,11 @@ Make sure you have the following installed:
 
 1. Clone the repository:
 
-   git clone https://github.com/theekshana56/IT23775442_Playright-project
+   git clone https://github.com/theekshana56/IT23775442_Playwright-project
 
 2. Navigate to the project directory:
 
-   cd IT23775442_Playright-project
+   cd IT23775442_Playwright-project
 
 3. Install dependencies:
 
